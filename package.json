@@ -1,0 +1,33 @@
+{
+  "name": "reloop-ewaste-lifecycle-tracker",
+  "version": "1.0.0",
+  "description": "ReLoop - SQL-Intensive E-Waste Lifecycle & Component-Level Recycling Tracker (PostgreSQL + Express + Vanilla JS DBMS Capstone)",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "migrate": "node server/src/database/migrations/run_migrations.js",
+    "seed": "node server/src/database/seeds/seed_reloop.js",
+    "db:reset": "node server/src/database/migrations/run_migrations.js --reset && node server/src/database/seeds/seed_reloop.js",
+    "test": "node server/tests/run_all_tests.js"
+  },
+  "keywords": [
+    "postgresql",
+    "dbms",
+    "e-waste",
+    "circular-economy",
+    "sql",
+    "traceability",
+    "express"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chart.js": "^4.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.13.3"
+  }
+}
